@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private Button reset;
     private TextView iloscRzutow;
     private int liczbaRzutow;
+    private int ilosc = 0;
+    private int wynikGier = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +66,15 @@ public class MainActivity extends AppCompatActivity {
     public void rollDice(){
         Random rand = new Random();
         int[] rzut = new int[5];
+        ilosc++;
+        iloscRzutow.setText("Ile rzutów: " + ilosc);
+        int sum = 0;
         for (int i = 0; i < 5; i++) {
             int liczba = rand.nextInt(6)+1;
             rzut[i] = liczba;
-
+            sum += liczba;
         }
+        updateScore(sum);
     }
     public void resetGame(){
         kosc1.setText("?");
@@ -76,5 +82,13 @@ public class MainActivity extends AppCompatActivity {
         kosc3.setText("?");
         kosc4.setText("?");
         kosc5.setText("?");
+        iloscRzutow.setText("Ile rzutów: 0");
+        wynikGry.setText("Wynik gry: 0");
+        wynikLosu.setText("Wynik tego losowania: 0");
+    }
+    public void updateScore(int newScore){
+        wynikGier += newScore;
+        wynikGry.setText("Wynik gry: " + wynikGier);
+        wynikLosu.setText("Wynik tego losowania: " + newScore);
     }
 }
