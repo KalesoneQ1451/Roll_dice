@@ -24,94 +24,15 @@
 
     <Button
         android:id="@+id/losowanie"
-        android:layout_width="296dp"
+        android:layout_width="377dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:text="RZUĆ KOŚĆMI"
+        app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:cornerRadius="0dp"/>
-
-    <TextView
-        android:id="@+id/kosc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="9dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:width="60dp"
-        android:height="60dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:text="\?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/losowanie" />
-
-    <TextView
-        android:id="@+id/kosc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="9dp"
-        android:layout_marginTop="8dp"
-        android:width="60dp"
-        android:height="60dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:text="\?"
-        app:layout_constraintEnd_toStartOf="@+id/kosc3"
-        app:layout_constraintHorizontal_bias="0.354"
-        app:layout_constraintStart_toEndOf="@+id/kosc1"
-        app:layout_constraintTop_toBottomOf="@+id/losowanie" />
-
-    <TextView
-        android:id="@+id/kosc3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="9dp"
-        android:layout_marginTop="8dp"
-        android:width="60dp"
-        android:height="60dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:text="\?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/losowanie" />
-
-    <TextView
-        android:id="@+id/kosc4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="16dp"
-        android:width="60dp"
-        android:height="60dp"
-        android:layout_margin="9dp"
-        android:text="\?"
-        android:background="@color/white"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/kosc5"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toEndOf="@+id/kosc3"
-        app:layout_constraintTop_toBottomOf="@+id/losowanie" />
-
-    <TextView
-        android:id="@+id/kosc5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="76dp"
-        android:width="60dp"
-        android:height="60dp"
-        android:layout_margin="9dp"
-        android:text="\?"
-        android:background="@color/white"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/losowanie" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/wynikLos"
@@ -120,10 +41,10 @@
         android:text="Wynik tego losowania: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.456" />
 
     <TextView
         android:id="@+id/wynikGry"
@@ -132,10 +53,11 @@
         android:text="Wynik gry: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.002"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.502" />
+
     <TextView
         android:id="@+id/ileLos"
         android:layout_width="wrap_content"
@@ -143,23 +65,56 @@
         android:text="Ile rzutów: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.546" />
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="296dp"
+        android:layout_width="385dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="RESETUJ WYNIK"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ileLos" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/losowanie">
+
+        <TextView
+            android:id="@+id/kosc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="\?"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/kosc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="\?"
+            android:textSize="30dp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
