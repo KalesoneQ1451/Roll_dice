@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private int liczbaRzutow;
     private int ilosc = 0;
     private int wynikGier = 0;
+    private int wynikLoswania;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
             sum += liczba;
         }
         updateScore(sum);
+        kosc1.setText(String.valueOf(rzut[0]));
+        kosc2.setText(String.valueOf(rzut[1]));
+        kosc3.setText(String.valueOf(rzut[2]));
+        kosc4.setText(String.valueOf(rzut[3]));
+        kosc5.setText(String.valueOf(rzut[4]));
     }
     public void resetGame(){
         kosc1.setText("?");
@@ -83,12 +89,16 @@ public class MainActivity extends AppCompatActivity {
         kosc4.setText("?");
         kosc5.setText("?");
         iloscRzutow.setText("Ile rzutów: 0");
+        ilosc = 0;
         wynikGry.setText("Wynik gry: 0");
+        wynikGier = 0;
         wynikLosu.setText("Wynik tego losowania: 0");
+        wynikLoswania = 0;
     }
     public void updateScore(int newScore){
         wynikGier += newScore;
+        wynikLoswania = newScore;
         wynikGry.setText("Wynik gry: " + wynikGier);
-        wynikLosu.setText("Wynik tego losowania: " + newScore);
+        wynikLosu.setText("Wynik tego losowania: " + wynikLoswania);
     }
 }
